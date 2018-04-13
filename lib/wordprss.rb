@@ -1,0 +1,7 @@
+require 'wordprss/url'
+require 'wordprss/channel'
+require 'wordprss/feed'
+require 'wordprss/item'
+require 'wordprss/request'
+require 'wordprss/invalid_url_error'
+require 'wordprss/policy'
