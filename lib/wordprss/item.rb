@@ -1,5 +1,3 @@
-require 'pry'
-
 module WordpRSS
   class Item
     def initialize(node)
