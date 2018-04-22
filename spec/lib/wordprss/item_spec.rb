@@ -32,6 +32,12 @@ describe WordpRSS::Item do
     it 'returns item creator' do
       expect(@item.creator).to eq('John Doe')
     end
+
+    it 'returns nil if creator node is not found' do
+      blank_node = Nokogiri::XML("<item></item>")
+
+      expect(WordpRSS::Item.new(blank_node).creator).to eq(nil)
+    end
   end
 
   describe '#tags' do

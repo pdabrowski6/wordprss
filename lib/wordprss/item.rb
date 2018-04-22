@@ -43,7 +43,8 @@ module WordpRSS
     #
     # @return [String]
     def creator
-      node.elements.last.children.find { |c| c.name == "dc:creator" }.text
+      creator_node = node.elements.last.children.find { |c| c.name == "dc:creator" }
+      creator_node.text if !creator_node.nil?
     end
 
     private
